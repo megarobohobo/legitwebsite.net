@@ -45,6 +45,7 @@
             max-width: 90%;
             max-height: 70vh;
             object-fit: contain;
+            cursor: pointer;
             /*box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);*/
         }
 
@@ -66,7 +67,7 @@
 
     <div id="content-screen">
         <!-- You can replace this GIF URL with your own -->
-        <img id="main-gif" src="chips-potato-chips.gif" alt="Vibe GIF">
+        <img id="main-gif" src="chips-potato-chips.gif" alt="Vibe GIF" onclick="changeText()">
         <h1 id="main-text">LEGIT CONTENT</h1>
         <audio id="bg-audio" loop>
             <!-- You can replace this audio URL with your own -->
@@ -76,6 +77,12 @@
     </div>
 
     <script>
+        const phrases = [
+            "LEGIT CONTENT",
+            "FUCK YOU"
+        ];
+        let currentPhraseIndex = 0;
+
         function enterSite() {
             const enterScreen = document.getElementById('enter-screen');
             const contentScreen = document.getElementById('content-screen');
@@ -91,6 +98,12 @@
             audio.play().catch(error => {
                 console.error("Audio playback was blocked or failed:", error);
             });
+        }
+
+        function changeText() {
+            const mainText = document.getElementById('main-text');
+            currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+            mainText.innerText = phrases[currentPhraseIndex];
         }
     </script>
 </body>
