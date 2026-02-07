@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legit Website</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial Black', Gadget, sans-serif;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        #enter-screen {
+            cursor: pointer;
+            font-size: clamp(3rem, 15vw, 8rem);
+            font-weight: 900;
+            letter-spacing: 5px;
+            transition: transform 0.2s ease, opacity 0.5s ease;
+        }
+
+        #enter-screen:hover {
+            transform: scale(1.1);
+        }
+
+        #content-screen {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            animation: fadeIn 1.5s ease;
+            width: 100%;
+        }
+
+        #content-screen img {
+            max-width: 90%;
+            max-height: 70vh;
+            object-fit: contain;
+            /*box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);*/
+        }
+
+        #content-screen h1 {
+            font-size: clamp(2rem, 8vw, 5rem);
+            margin-top: 2rem;
+            text-transform: uppercase;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="enter-screen" onclick="enterSite()">ENTER</div>
+
+    <div id="content-screen">
+        <!-- You can replace this GIF URL with your own -->
+        <img id="main-gif" src="chips-potato-chips.gif" alt="Vibe GIF">
+        <h1 id="main-text">LEGIT CONTENT</h1>
+        <audio id="bg-audio" loop>
+            <!-- You can replace this audio URL with your own -->
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        function enterSite() {
+            const enterScreen = document.getElementById('enter-screen');
+            const contentScreen = document.getElementById('content-screen');
+            const audio = document.getElementById('bg-audio');
+
+            // Hide the enter button
+            enterScreen.style.display = 'none';
+            
+            // Show the content
+            contentScreen.style.display = 'flex';
+            
+            // Play the looping audio
+            audio.play().catch(error => {
+                console.error("Audio playback was blocked or failed:", error);
+            });
+        }
+    </script>
+</body>
+</html>
