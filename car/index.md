@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: default
 ---
 
 | Make   | Model   | Year | Mileage | Price   | note   | Link                                                                                                                                |
