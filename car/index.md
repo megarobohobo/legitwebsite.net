@@ -9,6 +9,7 @@ layout: default
 | Toyota | Camry   | 2016 | 142,830 | $11,686 | carfax | [link](https://www.kenganleytoyotaakron.com/used-Akron-2016-Toyota-Camry-+-4T1BF1FK6GU571819?stocknum=54912TT&atc_ownerid=73661935) |
 
 Toyota Years Comparison
+
 | **Rank** | **Year Range** | **Reliability Verdict**                                                         |
 | -------- | -------------- | ------------------------------------------------------------------------------- |
 | **#1**   | **2015–2017**  | **The Best Overall.** Peak refinement and mechanical reliability.               |
